@@ -8,6 +8,8 @@ import org.openrndr.math.mix
 import org.openrndr.shape.Circle
 import kotlin.math.*
 
+// by Mark-Felix
+
 fun main() = application {
     configure { width = 800; height = 800 }
     program {
@@ -35,7 +37,8 @@ fun main() = application {
             val noiseUV = Vector2(
                 (1.0 + sin(percentRadians)) * scale,
                 (1.0 + cos(percentRadians)) * scale)
-
+            
+            // Insert these for interesting variations, looping with percent
             val cx = simplex(1, noiseUV)
             val cy = simplex(2, noiseUV)
             val cz = simplex(3, noiseUV)
